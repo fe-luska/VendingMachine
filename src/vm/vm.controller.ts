@@ -1,4 +1,5 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { ProdutoRepository } from "src/produto/produto.respository";
 import { AtualizaVmDTO } from "./dto/AtualizaVm.dto";
 import { CreateVmDTO } from "./dto/CreateVm.dto";
 import { VmEntity } from "./vm.entity";
@@ -20,12 +21,13 @@ export class VmController {
      * @param vm (CreateVmDTO) VM validada
      */
     @Post()
-    async createProduto(@Body() vm: CreateVmDTO) {
+    async createVm(@Body() vm: CreateVmDTO) {
         
         // Converte a VM de CreateVmDTO para um VmEntity
         const vmEntity = new VmEntity();
         vmEntity.nome = vm.nome;
         vmEntity.localizacao = vm.localizacao;
+        vmEntity.listaProdutos = new ProdutoRepository();
 
         // Salva a VM no array vms[]
         this.vmRepository.salvar(vmEntity);

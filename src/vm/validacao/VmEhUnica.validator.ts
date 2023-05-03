@@ -8,7 +8,7 @@ import { VmRepository } from "../vm.respository";
  */
 @Injectable()
 @ValidatorConstraint({ async: true }) // validador assincrono
-export class VmEhUnicoValidator implements ValidatorConstraintInterface {
+export class VmEhUnicaValidator implements ValidatorConstraintInterface {
 
     constructor(private vmRepository: VmRepository) {}
     
@@ -47,7 +47,7 @@ export const VmEhUnica = (opcoesDeValidacao: ValidationOptions) => {
             propertyName: propriedade,
             options: opcoesDeValidacao,
             constraints: [],
-            validator: VmEhUnicoValidator
+            validator: VmEhUnicaValidator
         });
     }
 }
