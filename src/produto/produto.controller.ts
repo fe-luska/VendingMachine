@@ -1,17 +1,26 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { VmEntity } from "src/vm/vm.entity";
 import { AtualizaProdutoDTO } from "./dto/AtualizaProduto.dto";
 import { CreateProdutoDTO } from "./dto/CreateProduto.dto";
 import { ProdutoEntity } from "./produto.entity";
 import { ProdutoRepository } from "./produto.respository";
 
+// const CAMINHO_VM = "/vm"
+const CAMINHO_PRODUTOS = "/produtos"
+
 /**
  * Controlador dos produtos. Os produtos são salvos no ProdutoRepository.
  */
-@Controller('/produtos')
+@Controller(CAMINHO_PRODUTOS)
 export class ProdutoController {
 
+    /**
+     * Construtor do controller do produto. Deve ser passado uma referencia
+     * ao repositorio e uma a vending machine
+     * @param produtoRepository
+     */
     constructor(private produtoRepository: ProdutoRepository) {
-
+        
     }
 
     /**
