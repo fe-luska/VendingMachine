@@ -40,6 +40,7 @@ async function getVms() {
         inputElement.name = "Codigo";
         inputElement.readOnly = true;
         inputElement.value = post.nome;
+        inputElement.size = 5;
 
         // criar o subtexto
         var pElement = document.createElement("p");
@@ -47,24 +48,15 @@ async function getVms() {
         pElement.textContent = "Localização: " + post.localizacao;
 
         // criar o botão gerenciar
-        var divBotao = document.createElement("div");
         var aElement = document.createElement("a");
         aElement.href = "prod.html";
         aElement.className = "btn btn-primary";
         aElement.textContent = "Gerenciar";
 
-        // criar o botão deletar
-        var buttonElement = document.createElement("a");
-        buttonElement.className = "btn btn-primary";
-        buttonElement.textContent = "Deletar";
-        buttonElement.onclick = function(){console.log("oi")};
-
         // adicionar os elementos filhos ao elemento card-body
         cardBodyDiv.appendChild(inputElement);
         cardBodyDiv.appendChild(pElement);
-        divBotao.appendChild(aElement);
-        divBotao.appendChild(buttonElement);
-        cardBodyDiv.appendChild(divBotao);
+        cardBodyDiv.appendChild(aElement);
 
         // adicionar o elemento card-body ao elemento card
         cardDiv.appendChild(cardBodyDiv);
@@ -77,30 +69,7 @@ async function getVms() {
         i++;
     }
 
-async function deletarVM(nome) {
 
-    console.log(nome);
-    
-    // const nome = document.getElementById('#inputNome').value;
-
-    // data = {
-    //     "nome": nome,
-    // }
-    // const response = await fetch(url + nome, {
-    //   method: "DELETE",
-    //   mode: "cors",
-    //   cache: "no-cache",
-    //   credentials: "same-origin",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   redirect: "follow",
-    //   referrerPolicy: "no-referrer",
-    //   body: JSON.stringify(data),
-    // });
-
-    // window.location.href = "http://127.0.0.1:5500/VM/index.html"
-}
 
 getVms();
 
