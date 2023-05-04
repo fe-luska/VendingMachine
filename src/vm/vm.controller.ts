@@ -28,6 +28,7 @@ export class VmController {
         vmEntity.nome = vm.nome;
         vmEntity.localizacao = vm.localizacao;
         vmEntity.listaProdutos = new ProdutoRepository();
+        vmEntity.listaProdutos.path = vm.nome;
 
         // Salva a VM no array vms[]
         this.vmRepository.salvar(vmEntity);
@@ -78,5 +79,4 @@ export class VmController {
             mensagem: 'VM removida com sucesso'
         }
     }
-
 }

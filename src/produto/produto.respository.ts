@@ -10,6 +10,7 @@ export class ProdutoRepository {
 
     // Array onde são salvos os produtos.
     private produtos: ProdutoEntity[] = [];
+    public path: string;
 
     /**
      * Salva o produto do tipo ProdutoEntity no array produtos[]

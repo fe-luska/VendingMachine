@@ -18,7 +18,7 @@ export class VmRepository {
     async salvar(vm: VmEntity) {
         this.vms.push(vm);
     }
-
+    
     /**
      * Lista as vms do database
      * @returns Lista das VMs salvas
