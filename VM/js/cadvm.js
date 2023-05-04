@@ -31,3 +31,23 @@ var bSalvar = document.getElementById("bSalvar");
 
     window.location.href = "http://127.0.0.1:5500/VM/index.html"
 }
+
+async function deletarVM() {
+
+  let nome = document.getElementById("#delNome").value;
+  // const nome = delNome.nome;
+
+  const response = await fetch(url + nome, {
+    method: "DELETE",
+    mode: "cors",
+    cache: "no-cache",
+    credentials: "same-origin",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+    referrerPolicy: "no-referrer",
+  });
+
+  window.location.href = "http://127.0.0.1:5500/VM/index.html"
+}

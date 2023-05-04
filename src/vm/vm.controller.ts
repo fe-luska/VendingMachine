@@ -79,4 +79,15 @@ export class VmController {
             mensagem: 'VM removida com sucesso'
         }
     }
+
+    // teste
+    // @Delete()
+    // async removeVm2(@Body() VM: AtualizaVmDTO) {
+    //     const vmRemovido = await this.vmRepository.remove(VM.nome);
+
+    //     return {
+    //         VM: vmRemovido,
+    //         mensagem: 'VM removida com sucesso'
+    //     }
+    // }
 }
