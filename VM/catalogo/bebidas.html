@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                </button>
+            </div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+                <div class="user-logo">
+                    <div class="img" style="background-image: url(images/logo.jpg);"></div>
+                    <h3>Vending Machines</h3>
+                </div>
+            </div>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="../index.html"><span class="fa fa-home mr-3"></span> Home</a>
+                </li>
+                <li>
+                    <a href="../prod.html"><span class="fa fa-shopping-cart mr-3"></span> Produtos</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-compass mr-3"></span> Localização </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- Page Content  -->
+        <div id="content" class="p-2 p-md-6 pt-6">
+            <br>
+            <form class="form-inline">
+                <?php while($linha = mysqli_fetch_assoc($query)){?>
+                <div class="p-2 p-md-6 pt-6">
+                    <div class="card w-80">
+                        <div class="card-body">
+                            <div class="d-flex w-100 justify-content-between">
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px; border: none; background: transparent;" id="IdDoinput" name="Codigo" readonly>
+                            </div>
+                            <br>
+                            <small>
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px;border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </small>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 p-md-6 pt-6">
+                    <div class="card w-80">
+                        <div class="card-body">
+                            <div class="d-flex w-100 justify-content-between">
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px; border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </div>
+                            <br>
+                            <small>
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px;border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </small>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 p-md-6 pt-6">
+                    <div class="card w-80">
+                        <div class="card-body">
+                            <div class="d-flex w-100 justify-content-between">
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px; border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </div>
+                            <br>
+                            <small>
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px;border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </small>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none;background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none;background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 p-md-6 pt-6">
+                    <div class="card w-80">
+                        <div class="card-body">
+                            <div class="d-flex w-100 justify-content-between">
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px; border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </div>
+                            <br>
+                            <small>
+                                <input type="text" class="texto" class="form-control p-5 mb-2 mr-sm-2"
+                                    style="margin-right: 2px;border: none; background: transparent;" value="<?php echo $linha['Codigo']?>"
+                                    name="Codigo" readonly>
+                            </small>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                            <input type="text" class="texto" class="form-control mb-2 mr-sm-2"
+                                style="margin-right: 2px; margin-left: 5px;border: none; background: transparent;"
+                                value="<?php echo $linha['nome']?>" name="Nome" readonly>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </form>
+        <a href="cadastro.html" class="btn btn-primary" style="height: 40px; margin-top: 2em; margin-right: 1em;"> Editar </a>
+        <a href="cadastro.html" class="btn btn-primary" style="height: 40px; margin-top: 2em; margin-right: 3em;"> Deletar </a>
+    </div>
+    <script src="../js/test.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
