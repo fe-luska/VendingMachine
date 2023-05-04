@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Contatos</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                </button>
+            </div>
+            <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+                <div class="user-logo">
+                    <div class="img" style="background-image: url(images/logo.jpg);"></div>
+                    <h3>Vending Machines</h3>
+                </div>
+            </div>
+            <ul class="list-unstyled components mb-5">
+                <li class="active">
+                    <a href="index.html"><span class="fa fa-home mr-3"></span> Home</a>
+                </li>
+                <li>
+                    <a href="prod.html"><span class="fa fa-shopping-cart mr-3"></span> Produtos</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-compass mr-3"></span> Localização </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- Page Content  -->
+        <div id="content" class="p-2 p-md-6 pt-6">
+            <br>
+            <br>
+            <p style="margin-left: 25%; font-size: 30px;">Insira o nome da VM que deseja deletar.</p>
+            <form style="margin-left: 25%;">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Deletar</button>
+            </form>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
