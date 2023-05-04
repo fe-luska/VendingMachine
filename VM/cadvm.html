@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src = "js/cadvm.js" defer></script>
 </head>
 
 <body>
@@ -44,22 +45,16 @@
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="Nome">
+                        <input type="text" class="form-control" id="#inputNome" placeholder="Nome">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Localização</label>
+                    <label for="inputPinputEmail3assword3" class="col-sm-2 col-form-label">Localização</label>
                     <div class="col-sm-5">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Localização">
+                        <input type="text" class="form-control" id="#inputLoc" placeholder="Localização">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Lista de Produtos</label>
-                    <div class="col-sm-5">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Lista">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button id="bSalvar" type="button" class="btn btn-primary" onclick="postVM()">Salvar</button>
             </form>
         </div>
         <script src="js/jquery.min.js"></script>
